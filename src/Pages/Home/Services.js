@@ -29,7 +29,7 @@ const Services = () => {
         <section className='my-12'>
             <div className='text-center'>
                 <h1 className='text-primary font-bold text-xl'>OUR SERVICES</h1>
-                <h2 className='text-4xl mt-2'>Services We Provide</h2>
+                <h2 className='text-4xl my-4'>Services We Provide</h2>
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
                 {

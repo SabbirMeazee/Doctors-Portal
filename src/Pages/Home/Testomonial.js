@@ -34,7 +34,7 @@ const Testomonial = () => {
                     <h2 className='text-4xl'>What Our Patients Says</h2>
                 </div>
                 <div>
-                    <img className='w-24 lg:w-48' src={qoute} alt="" srcset="" />
+                    <img className='w-24 lg:w-48' src={qoute} alt="" srcSet="" />
                 </div>
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 my-14'>
