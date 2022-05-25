@@ -8,10 +8,10 @@ import { format } from 'date-fns';
 const AppoinmentBanner = ({ date, setDate }) => {
     return (
         <div>
-            <div style={{ background: bg, backgroundSize: 'cover' }} class="hero min-h-screen">
-                <div class="flex justify-between lg:flex-row-reverse items-center">
+            <div style={{ background: bg, backgroundSize: 'cover' }} className="hero min-h-screen">
+                <div className="flex justify-between lg:flex-row-reverse items-center">
                     <div className='p-8'>
-                        <img src={chair} class="max-w-sm rounded-lg shadow-2xl" alt='' />
+                        <img src={chair} className="max-w-sm rounded-lg shadow-2xl" alt='' />
                     </div>
                     <div className='mx-5 shadow-xl rounded-xl p-4'>
                         <DayPicker
