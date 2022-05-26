@@ -13,6 +13,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyAppointments from "./Pages/Dashboard/MyAppointments";
 import MyReview from "./Pages/Dashboard/MyReview";
 import Myhistory from "./Pages/Dashboard/Myhistory";
+import Users from "./Pages/Dashboard/Users";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route index element={<MyAppointments></MyAppointments>}></Route>
           <Route path="review" element={<MyReview></MyReview>}></Route>
           <Route path="history" element={<Myhistory></Myhistory>}></Route>
+          <Route path="users" element={<Users></Users>}></Route>
         </Route>
       </Routes>
       <ToastContainer />

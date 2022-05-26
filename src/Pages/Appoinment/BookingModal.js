@@ -39,8 +39,8 @@ const BookingModal = ({ treatment, date, setTreatment, refetch }) => {
                     toast(`Already hava an appoinmet on ${data.booking?.date} at ${data.booking?.slot}`)
                 }
                 // for close the modal
-                refetch()
                 setTreatment(null)
+                refetch()
             })
     }
     return (

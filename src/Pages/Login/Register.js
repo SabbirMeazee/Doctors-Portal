@@ -4,10 +4,12 @@ import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../Shared/Loading';
 import { Link, useNavigate } from 'react-router-dom';
+import useToken from '../../Hooks/useToken';
 const Register = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
+
     const navigate = useNavigate()
     const [
         createUserWithEmailAndPassword,
@@ -15,6 +17,8 @@ const Register = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+    const [token] = useToken(user || gUser);
+
     if (loading || gLoading || updating) {
         return <Loading></Loading>;
     }
@@ -22,16 +26,16 @@ const Register = () => {
     if (error || gError || updateError) {
         Error = <p className='text-red-500'> {error?.message || gError?.message || updateError?.message}</p>
     }
+    if (token) {
+        navigate('/appointment');
+    }
     const onSubmit = async data => {
 
         await createUserWithEmailAndPassword(data.email, data.password)
         await updateProfile({ displayName: data.name });
-        navigate('/appointment')
-        console.log(data)
+        // console.log(data)
     };
-    if (user || gUser) {
-        console.log(user)
-    }
+    
     return (
         <div className="flex items-center h-screen justify-center">
             <div className="card w-96 bg-base-100 shadow-xl">
