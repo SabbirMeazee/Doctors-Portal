@@ -13,7 +13,7 @@ const Footer = () => {
                     <a className="link link-hover">Advertisement</a>
                 </div>
                 <div>
-                    <span className="footer-title">ORAL HEALTH</span>
+                    <span className="footer-title">Contact</span>
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Contact</a>
                     <a className="link link-hover">Jobs</a>
